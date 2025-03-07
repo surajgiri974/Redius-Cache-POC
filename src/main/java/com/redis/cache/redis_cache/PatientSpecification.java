@@ -1,16 +1,16 @@
 package com.redis.cache.redis_cache;
 
+import com.redis.cache.redis_cache.entity.Patient;
 import org.springframework.data.jpa.domain.Specification;
-import com.redis.cache.redis_cache.entity.Facility;
 
 import jakarta.persistence.criteria.Predicate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class FacilitySpecification {
+public class PatientSpecification {
 
-    public static Specification<Facility> getFacilitiesByFilters(Map<String, Object> filters) {
+    public static Specification<Patient> getFacilitiesByFilters(Map<String, Object> filters) {
         return (root, query, criteriaBuilder) -> {
             List<Predicate> predicates = new ArrayList<>();
 

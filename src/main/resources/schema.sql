@@ -1,17 +1,20 @@
-CREATE TABLE facility (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    location VARCHAR(255) NOT NULL,
-    type VARCHAR(255) NOT NULL,
-    capacity INT NOT NULL
+CREATE TABLE patient (
+    patient_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    date_of_birth DATE NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    contact_number VARCHAR(15),
+    email VARCHAR(255) UNIQUE,
+    address TEXT
 );
 
-CREATE TABLE room (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    room_number VARCHAR(255) NOT NULL,  -- Changed "name" to "room_number" for consistency
-    type VARCHAR(100) NOT NULL,         -- Added "type" to match the Java entity
-    facility_id BIGINT NOT NULL,
-    capacity INT NOT NULL,
-    FOREIGN KEY (facility_id) REFERENCES facility(id) ON DELETE CASCADE
+CREATE TABLE insurance_claim (
+    claim_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    claim_type VARCHAR(255) NOT NULL,
+    amount DOUBLE NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    claim_date DATE NOT NULL,
+    patient_id BIGINT NOT NULL,
+    FOREIGN KEY (patient_id) REFERENCES patient(patient_id) ON DELETE CASCADE
 );
-

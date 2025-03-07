@@ -1,23 +1,43 @@
--- ✅ Insert 10 Facilities
-INSERT INTO facility (name, location, type, capacity) VALUES ('City Hospital', 'New York', 'Hospital', 500);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Sunrise Clinic', 'Los Angeles', 'Clinic', 200);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Metro Healthcare', 'Chicago', 'Hospital', 800);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Wellness Center', 'Houston', 'Wellness', 300);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Greenfield Hospital', 'Boston', 'Hospital', 400);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Oceanview Clinic', 'San Francisco', 'Clinic', 150);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Pinecrest Hospital', 'Seattle', 'Hospital', 600);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Riverside Medical', 'Denver', 'Medical Center', 350);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Grandview Healthcare', 'Atlanta', 'Hospital', 700);
-INSERT INTO facility (name, location, type, capacity) VALUES ('Silverline Clinic', 'Dallas', 'Clinic', 180);
+INSERT INTO patient (first_name, last_name, date_of_birth, gender, contact_number, email, address) VALUES
+('John', 'Doe', '1985-06-15', 'Male', '1234567890', 'john.doe@email.com', '123 Main St, New York, NY'),
+('Jane', 'Smith', '1990-02-25', 'Female', '9876543210', 'jane.smith@email.com', '456 Elm St, Los Angeles, CA'),
+('Michael', 'Johnson', '1978-11-03', 'Male', '1122334455', 'michael.j@email.com', '789 Pine St, Chicago, IL'),
+('Emily', 'Davis', '1982-07-19', 'Female', '5566778899', 'emily.d@email.com', '101 Oak St, Houston, TX'),
+('David', 'Brown', '1995-04-10', 'Male', '6677889900', 'david.b@email.com', '202 Cedar St, Phoenix, AZ'),
+('Sarah', 'Wilson', '2000-12-05', 'Female', '7788990011', 'sarah.w@email.com', '303 Birch St, Philadelphia, PA'),
+('James', 'Martinez', '1987-09-21', 'Male', '8899001122', 'james.m@email.com', '404 Maple St, San Antonio, TX'),
+('Laura', 'Garcia', '1975-03-14', 'Female', '9900112233', 'laura.g@email.com', '505 Walnut St, San Diego, CA'),
+('Daniel', 'Rodriguez', '1992-08-30', 'Male', '1011121314', 'daniel.r@email.com', '606 Spruce St, Dallas, TX'),
+('Sophia', 'Lopez', '1989-05-17', 'Female', '1213141516', 'sophia.l@email.com', '707 Cypress St, San Jose, CA'),
+('William', 'Clark', '1993-06-29', 'Male', '1314151617', 'william.c@email.com', '808 Redwood St, Austin, TX'),
+('Olivia', 'Lewis', '1998-01-11', 'Female', '1415161718', 'olivia.l@email.com', '909 Aspen St, Jacksonville, FL'),
+('Alexander', 'Walker', '1971-12-22', 'Male', '1516171819', 'alex.w@email.com', '1010 Sycamore St, Columbus, OH'),
+('Emma', 'Hall', '1984-07-05', 'Female', '1617181920', 'emma.h@email.com', '1111 Chestnut St, Indianapolis, IN'),
+('Benjamin', 'Allen', '1997-10-15', 'Male', '1718192021', 'ben.a@email.com', '1212 Poplar St, San Francisco, CA'),
+('Charlotte', 'Young', '1994-03-27', 'Female', '1819202122', 'charlotte.y@email.com', '1313 Fir St, Fort Worth, TX'),
+('Lucas', 'Hernandez', '1999-09-09', 'Male', '1920212223', 'lucas.h@email.com', '1414 Magnolia St, Charlotte, NC'),
+('Amelia', 'King', '1986-06-08', 'Female', '2021222324', 'amelia.k@email.com', '1515 Dogwood St, Detroit, MI'),
+('Mason', 'Wright', '1991-05-20', 'Male', '2122232425', 'mason.w@email.com', '1616 Cherry St, El Paso, TX'),
+('Mia', 'Scott', '2001-02-14', 'Female', '2223242526', 'mia.s@email.com', '1717 Willow St, Memphis, TN');
 
--- ✅ Insert 10 Rooms (Assign them to Facilities)
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('101', 'ICU', 2, 1);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('102', 'General Ward', 4, 2);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('201', 'Surgery', 1, 3);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('202', 'Maternity', 2, 4);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('301', 'ICU', 3, 5);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('302', 'General Ward', 5, 6);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('401', 'Pediatrics', 2, 7);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('402', 'Emergency', 3, 8);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('501', 'Maternity', 2, 9);
-INSERT INTO room (room_number, type, capacity, facility_id) VALUES ('502', 'ICU', 1, 10);
+INSERT INTO insurance_claim (claim_type, amount, status, claim_date, patient_id) VALUES
+('Medical', 2500.50, 'Approved', '2024-01-15', 1),
+('Dental', 1800.75, 'Pending', '2024-02-10', 2),
+('Surgery', 5000.00, 'Rejected', '2023-12-05', 3),
+('Medical', 2200.00, 'Approved', '2024-03-01', 4),
+('Vision', 700.20, 'Pending', '2024-01-20', 5),
+('Dental', 1500.00, 'Approved', '2024-02-18', 6),
+('Surgery', 8000.00, 'Rejected', '2024-03-05', 7),
+('Medical', 1200.50, 'Approved', '2024-01-30', 8),
+('Vision', 600.00, 'Pending', '2024-02-15', 9),
+('Medical', 3400.25, 'Approved', '2023-12-10', 10),
+('Surgery', 7600.80, 'Rejected', '2024-01-25', 11),
+('Dental', 900.50, 'Approved', '2024-02-05', 12),
+('Medical', 2100.00, 'Pending', '2024-03-02', 13),
+('Vision', 800.75, 'Rejected', '2024-01-22', 14),
+('Dental', 2000.00, 'Approved', '2024-02-28', 15),
+('Medical', 1500.50, 'Pending', '2023-12-15', 16),
+('Surgery', 9000.00, 'Rejected', '2024-01-05', 17),
+('Medical', 1800.75, 'Approved', '2024-02-12', 18),
+('Vision', 650.25, 'Pending', '2024-03-06', 19),
+('Dental', 1300.00, 'Approved', '2023-12-20', 20);
